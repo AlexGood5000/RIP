@@ -1,0 +1,27 @@
+{% block title %} Рубежный контроль №2. Сысоев Александр РТ5-51Б. Вариант Е19 {% endblock %}
+{% block body %}
+<div>
+<div>
+<table>
+<thead>
+<tr>
+<th scope="col">ID</th>
+<th scope="col">Наименование детали</th>
+<th scope="col">Цена детали</th>
+<th scope="col">Производитель</th>
+</tr>
+</thead>
+<tbody>
+{% for det in data.details %}
+<tr>
+<th scope="row">{{ det.id }}</th>
+<td>{{ det.name_det }}</td>
+<td>{{ det.cost_det }}</td>
+<td>{{ det.mans.name_man }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+</div>
+{% endblock %}
