@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/table.css'%}">
+    <title>Отчёт</title>
+</head>
+<body>
+<a href="/">На главную</a>
+<div>
+<div>
+<table>
+<thead>
+<tr>
+    <th scope="col">ID</th>
+    <th scope="col">Производитель</th>
+    <th scope="col">Страна</th>
+    <th scope="col">Модель</th>
+    <th scope="col">Диагональ дисплея</th>
+    <th scope="col">Оперативная память</th>
+    <th scope="col">Операционная система</th>
+</tr>
+</thead>
+<tbody>
+{% for notebook in notebooks %}
+<tr>
+    <th scope="row">{{ notebook.id }}</th>
+    <td>{{ notebook.manuf.name }}</td>
+    <td>{{ notebook.manuf.country }}</td>
+    <td>{{ notebook.name }}</td>
+    <td>{{ notebook.display }}</td>
+    <td>{{ notebook.ram }}</td>
+    <td>{{ notebook.os }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

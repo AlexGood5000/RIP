@@ -1,0 +1,12 @@
+td {
+  background: white;
+  border-bottom: 1px solid black;
+  color: black;
+  border-top: 1px solid transparent;
+  border-top-color: black;
+  border-left: 1px solid;
+  border-left-color: black;
+  border-right: 1px solid;
+  border-right-color: black;
+  padding: 8px;
+}
